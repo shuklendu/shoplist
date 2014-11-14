@@ -1,0 +1,201 @@
+.amounts {
+    text-align: center;
+}
+.amounts label {
+    display: inline-block;
+    min-width: 150px;
+}
+
+.totals {
+    color: #080;
+}
+.ui-header .ui-title, .ui-footer .ui-title {
+	margin: 0 10%;
+}
+
+[data-role=page]{height: 100% !important; position:relative !important;}
+[data-role=footer]{bottom:0; position:absolute !important; top: auto !important; width:100%;}
+::selection {
+    color: none;
+    background: none;
+}
+.form-error .ui-input-text:nth-child(1){
+	border: 1px solid red;
+	background: #ffd2d2;
+}
+
+.form-error .required::-webkit-input-placeholder { /* WebKit browsers */
+    color:    red;
+}
+.form-error .required:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    red;
+   opacity:  1;
+}
+.form-error .required::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    red;
+   opacity:  1;
+}
+.form-error .required:-ms-input-placeholder { /* Internet Explorer 10+ */
+   color:    red;
+}
+.add-items .ui-input-text:nth-child(1) {
+	width: 68%;
+	float: left;
+}
+.add-items .ui-input-text:nth-child(2) {
+	width: 28%;
+	float: right;
+}
+.clear-both, .add-items .ui-btn{
+	clear: both;
+}
+.checked:after{
+	background-color: lightseagreen;
+}
+.scrollable {
+    overflow-y: scroll;
+    position: absolute;
+    left: 16px;
+    right: 16px;
+    top: 193px;
+    bottom: 16px;
+    -webkit-overflow-scrolling: touch;
+}
+
+.sub-header{
+	font-weight: normal;
+	text-align: center;
+	border-bottom: 1px solid #ccc;
+	padding: 
+}
+
+div, p, a, span, h2, h1 {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	-webkit-tap-highlight-color: transparent;
+}
+
+div::selection, p::selection, a::selection, span::selection, h2::selection{ background-color: transparent;}
+div::webkit-selection, p::webkit-selection, a::webkit-selection, span::webkit-selection, h2::webkit-selection{ background-color: transparent;}
+
+/* Overrides*/
+.in {
+	-webkit-animation-timing-function: ease-out;
+	-webkit-animation-duration: 50ms;
+	-moz-animation-timing-function: ease-out;
+	-moz-animation-duration: 50ms;
+	animation-timing-function: ease-out;
+	animation-duration: 50ms;
+}
+.out {
+	-webkit-animation-timing-function: ease-in;
+	-webkit-animation-duration: 25ms;
+	-moz-animation-timing-function: ease-in;
+	-moz-animation-duration: 25ms;
+	animation-timing-function: ease-in;
+	animation-duration: 25ms;
+}
+
+.flow.out {
+	-webkit-transform: translateX(-100%) scale(.7);
+	-webkit-animation-name: flowouttoleft;
+	-webkit-animation-timing-function: ease;
+	-webkit-animation-duration: 25ms;
+	-moz-transform: translateX(-100%) scale(.7);
+	-moz-animation-name: flowouttoleft;
+	-moz-animation-timing-function: ease;
+	-moz-animation-duration: 25ms;
+	transform: translateX(-100%) scale(.7);
+	animation-name: flowouttoleft;
+	animation-timing-function: ease;
+	animation-duration: 25ms;
+}
+.flow.in {
+	-webkit-transform: translateX(0) scale(1);
+	-webkit-animation-name: flowinfromright;
+	-webkit-animation-timing-function: ease;
+	-webkit-animation-duration: 50ms;
+	-moz-transform: translateX(0) scale(1);
+	-moz-animation-name: flowinfromright;
+	-moz-animation-timing-function: ease;
+	-moz-animation-duration: 50ms;
+	transform: translateX(0) scale(1);
+	animation-name: flowinfromright;
+	animation-timing-function: ease;
+	animation-duration: 50ms;
+}
+
+/* Button hover */
+.ui-page-theme-a .items-list .ui-btn:hover,
+html .ui-bar-a .items-list .ui-btn:hover,
+html .ui-body-a .items-list .ui-btn:hover,
+html body .ui-group-theme-a .items-list .ui-btn:hover,
+html head + body .ui-btn.ui-btn-a:hover {
+	background-color: 			#f6f6f6 /*{a-bhover-background-color}*/;
+	border-color:	 		#ddd /*{a-bhover-border}*/;
+	color: 					#333 /*{a-bhover-color}*/;
+	text-shadow: 0 /*{a-bhover-shadow-x}*/ 1px /*{a-bhover-shadow-y}*/ 0 /*{a-bhover-shadow-radius}*/ #f3f3f3 /*{a-bhover-shadow-color}*/;
+}
+/* Button down */
+.ui-page-theme-a .items-list .items-list .ui-btn:active,
+html .ui-bar-a .items-list .ui-btn:active,
+html .ui-body-a .items-list .ui-btn:active,
+html body .ui-group-theme-a .items-list .ui-btn:active,
+html head + body .items-list .ui-btn.ui-btn-a:active {
+	background-color: 			#f6f6f6 /*{a-bdown-background-color}*/;
+	border-color:	 		#ddd /*{a-bdown-border}*/;
+	color: 					#333 /*{a-bdown-color}*/;
+	text-shadow: 0 /*{a-bdown-shadow-x}*/ 1px /*{a-bdown-shadow-y}*/ 0 /*{a-bdown-shadow-radius}*/ #f3f3f3 /*{a-bdown-shadow-color}*/;
+}
+
+.modal-wrapper, .modal-bg{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 999;
+}
+.modal-bg{
+	background: #000;
+	opacity: 0.5;	
+}
+.modal{
+	background: #fff;
+	width: 280px;
+	min-height: 100px;
+	left: 50%;
+	top: 50%;
+	margin: -50px 0 0 -140px;
+	opacity: 1;
+	position: absolute;
+	z-index: 1000;
+	border-radius: .3125em;
+}
+
+.modal h2{
+	margin: 0;
+	font-size: 1em;
+	background: #e9e9e9;
+	padding: 10px;
+	border-top-left-radius:.3125em;
+	border-top-right-radius:.3125em;
+}
+.modal p{
+	padding: 0 10px;
+}
+.modal-buttons {
+	border-top: 1px solid #ddd;
+	text-align: center;
+}
+
+.modal-buttons .ui-btn{
+	background: #e9e9e9;
+	border: 1px solid #ddd;
+	color: #000;
+}
+
+.modal-wrapper, .modal-bg{
+	display: block;
+}
