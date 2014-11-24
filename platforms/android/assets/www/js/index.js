@@ -43,8 +43,6 @@ var app = {
 
         listeningElement.setAttribute('style', 'display:none;');
         receivedElement.setAttribute('style', 'display:block;');
-
-        console.log('Received Event: ' + id);
     }
 };
 
@@ -112,8 +110,7 @@ angular.module('shopListApp', [])
                 id: listId,
                 label: listLabel
             };
-            $.mobile.navigate( "#createList" ); 
-            console.log($scope.listItems[$scope.activeList.id])           
+            $.mobile.navigate( "#createList" );
         };
 
         $scope.confirmDelete = function(deleteId, deleteLabel, itemID){
@@ -127,7 +124,14 @@ angular.module('shopListApp', [])
 
         $scope.deleteList = function(){
             if( $scope.deleteItem.itemId ) {
-                delete $scope.listItems[$scope.deleteItem.id].items[$scope.deleteItem.itemId];
+                if( $scope.listItems[$scope.deleteItem.id].items[$scope.deleteItem.itemId] ){
+                    delete $scope.listItems[$scope.deleteItem.id].items[$scope.deleteItem.itemId];
+                    $scope.listItems[$scope.activeList.id].itmsCount--;
+                } else if( $scope.listItems[$scope.deleteItem.id].itemsDone[$scope.deleteItem.itemId] ){
+                    delete $scope.listItems[$scope.deleteItem.id].itemsDone[$scope.deleteItem.itemId];
+                    $scope.listItems[$scope.activeList.id].itmsDoneCount--;
+                    $scope.listItems[$scope.activeList.id].itmsCount--;
+                }
             } else {
                 delete $scope.listItems[$scope.deleteItem.id];
             }
@@ -201,7 +205,7 @@ angular.module('shopListApp', [])
     }])
     .directive('renderListBeforeShow', ['$timeout', function($timeout) {
         function link(scope, element, attrs) {
-            $(document).on("pagebeforeshow","#"+attrs.id,function(){
+            $(document).on("pageshow","#"+attrs.id,function(){
                 scope.$emit('refreshList');
                 scope.$apply(function () {
                     scope.formError = false;

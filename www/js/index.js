@@ -205,7 +205,7 @@ angular.module('shopListApp', [])
     }])
     .directive('renderListBeforeShow', ['$timeout', function($timeout) {
         function link(scope, element, attrs) {
-            $(document).on("pagebeforeshow","#"+attrs.id,function(){
+            $(document).on("pageshow","#"+attrs.id,function(){
                 scope.$emit('refreshList');
                 scope.$apply(function () {
                     scope.formError = false;

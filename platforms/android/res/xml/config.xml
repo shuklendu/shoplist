@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.example.hello" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="com.shuklendu.shoplist" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <preference name="loglevel" value="DEBUG" />
     <preference name="AndroidLaunchMode" value="singleTop" />
     <feature name="App">
@@ -9,7 +9,7 @@
     <description>
         ShopList Application
     </description>
-    <author email="shuklendu.ha@gmail.com" href="http://phonegap.com">
+    <author email="shuklendu.ha@gmail.com" href="https://plus.google.com/u/0/+ShuklenduAyachit/about">
         Shuklendu Ayachit
     </author>
     <content src="index.html" />
