@@ -64,7 +64,7 @@
     left: 16px;
     right: 16px;
     top: 193px;
-    bottom: 16px;
+    bottom: 30px;
     -webkit-overflow-scrolling: touch;
 }
 
@@ -204,4 +204,20 @@ html head + body .items-list .ui-btn.ui-btn-a:active {
 
 .modal-wrapper, .modal-bg{
 	display: block;
+}
+
+.info-text {
+	font-size: 0.75em;
+	margin: 0;
+	position: absolute;
+	left: 16px;
+	bottom: 0;
+}
+
+.info-text .ui-btn.ui-shadow.ui-corner-all.ui-icon-info.ui-btn-icon-notext.ui-btn-inline {
+	border: none;
+	border: none;
+	box-shadow: none;
+	background: none;
+	margin: 0;
 }
